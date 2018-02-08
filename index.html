@@ -5,51 +5,61 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Insta-Collage</title>
-	<link rel="icon" href="assets/images/logo.ico">
+	<title>Insta Collage</title>
+	<link rel="icon" href="assets/images/insta.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	  crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Quicksand" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-
-	<div class="container-fluid box">
-		<div class="row receiver-cont">
-			<div class="col-4 padding-photo collage" ondragover="allowDrop(event)" ondrop="drop(event)">
+	<!-- Image and text -->
+	<nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="assets/images/insta.png" width="30" height="30" class="d-inline-block align-top" alt=""> Insta Collage
+		</a>
+	</nav>
+	<section class="container-fluid container-collage">
+		<div class="row">
+			<div class="col-md-3 padding collage " ondragover="allowDrop(event)" ondrop="drop(event)">
 			</div>
-			<div class="col-4 padding-photo collage" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="col-md-3 padding collage" ondragover="allowDrop(event)" ondrop="drop(event)">
 			</div>
-			<div class="col-4 padding-photo collage" ondragover="allowDrop(event)" ondrop="drop(event)">
-			</div>
-			<div class="col-4 padding-photo collage" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="col-md-3 padding collage" ondragover="allowDrop(event)" ondrop="drop(event)">
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<section class="container-fluid separator-photo">
-		<p class="text-center text-muted">photo booth</p>
+		<h2 class="text-center text-muted">Insta collage</h2>
 	</section>
 
 	<!-- segunda sección, fotos arrastrables -->
-	<section class="container-fluid">
+	<section class="container-fluid photos">
 		<div class="row">
-			<div class="col-xs-4">
-				<img src="assets/images/dnce.jpeg" alt="" class="img-responsive" draggable="true" ondragstart="drag(event)" id="img0"> </div>
-			<div class="col-xs-4">
-				<img src="assets/images/fall-out-boy.png" alt="" class="img-responsive" draggable="true" ondragstart="drag(event)" id="img1">
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="assets/images/dnce.jpeg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img0">
 			</div>
-			<div class="col-xs-4">
-				<img src="assets/images/imagine-dragons.jpg" alt="" class="img-responsive" draggable="true" ondragstart="drag(event)" id="img2">
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="assets/images/fall-out-boy.png" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)"
+				  id="img1">
 			</div>
-			<div class="col-xs-4">
-				<img src="assets/images/bruno-mars.jpg" alt="" class="img-responsive" draggable="true" ondragstart="drag(event)" id="img3">
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="assets/images/imagine-dragons.jpg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)"
+				  id="img2">
 			</div>
-			<div class="col-xs-4">
-				<img src="assets/images/marron-five.jpg" alt="" class="img-responsive" draggable="true" ondragstart="drag(event)" id="img4">
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="assets/images/bruno-mars.jpg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)"
+				  id="img3">
 			</div>
-			<div class="col-xs-4">
-				<img src="assets/images/shawn-mendess.png" alt="" class="img-responsive" draggable="true" ondragstart="drag(event)" id="img5">
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="assets/images/marron-five.jpg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)"
+				  id="img4">
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="assets/images/shawn-mendess.png" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)"
+				  id="img5">
 			</div>
 		</div>
 	</section>

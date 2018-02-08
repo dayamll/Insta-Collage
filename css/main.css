@@ -1,28 +1,37 @@
-/* Clases de drag and drop */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lobster', cursive;
+}
 
+body {
+  background-repeat: no-repeat;
+  background: rgb(141, 26, 87);
+  background: linear-gradient(45deg, rgb(155, 45, 104) 0%, rgb(255, 71, 169) 6%, rgb(248, 110, 121) 39%, rgba(248,162,74,1) 68%, rgba(244,204,64,1) 82%, rgba(242,231,66,1) 96%, rgba(242,231,66,1) 100%);    
+}
+
+
+/* Clases de drag and drop */
 .collage {
-  background-color: rgb(145, 255, 0);
+  background-color: rgb(223, 240, 200);
   border: 0.1rem solid black;
   border-radius: 0.5rem;
   height: 40vh;
-  margin: 1rem;
+  margin: 1rem 3rem;
 }
 
-div .padding-photo {
+.padding{
   padding-left: 0;
   padding-right: 0;
 }
 
-.receiver-cont {
-  height: 15em;
-}
-
-div .box {
-  padding: 3rem;
+.padding-photo {
+  padding: 0.3rem;
 }
 
 .separator-photo {
-  height: 2.5em;
+  height: 3.5rem;
   background: #26272B;
   padding: 0.5em;
 }
@@ -37,3 +46,5 @@ div .box {
   height: 100%;
   object-fit: cover;
 }
+
+
