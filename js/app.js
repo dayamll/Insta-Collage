@@ -1,4 +1,4 @@
-$(window).resize(function () {
+$(window).resize(function() {
   var imgWidth = $(this).width();
   // Contenedor con height responsivo
   $('.receiver-cont').height(imgWidth / 2);
