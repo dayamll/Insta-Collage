@@ -1,0 +1,18 @@
+.collage {
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  height: 35vh;
+}
+
+.padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.photos {
+  background-color: rgb(216, 62, 236);
+}
+
+.padding-photo {
+  padding: 0.3rem;
+}
