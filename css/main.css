@@ -16,9 +16,13 @@ body {
 .collage {
   background-color: rgb(223, 240, 200);
   border: 0.1rem solid black;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   height: 40vh;
-  margin: 1rem 3rem;
+  /* margin: 1rem 3rem; */
+}
+
+.margin {
+  margin-left: 50px;
 }
 
 .padding{
