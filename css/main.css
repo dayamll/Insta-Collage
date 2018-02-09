@@ -2,13 +2,39 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lobster', cursive;
 }
 
 body {
+  height: 100vh;
   background-repeat: no-repeat;
-  background: rgb(141, 26, 87);
-  background: linear-gradient(45deg, rgb(155, 45, 104) 0%, rgb(255, 71, 169) 6%, rgb(248, 110, 121) 39%, rgba(248,162,74,1) 68%, rgba(244,204,64,1) 82%, rgba(242,231,66,1) 96%, rgba(242,231,66,1) 100%);    
+  background: rgb(241, 49, 184);
+  background: linear-gradient(50deg, 
+   rgb(241, 47, 216) 0%,
+   rgb(252, 120, 252) 35%, 
+   rgb(253, 180, 96) 75%, 
+   rgb(255, 193, 60) 90%,
+   rgb(250, 205, 57) 100%);    
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+}
+
+.logo-insta {
+  height: 5rem;
+}
+
+.margin-title, .btn-margin {
+  margin:1rem;
+}
+
+.margin-img{
+  margin:3.2rem 2rem;
+}
+
+.btn .sociales{
+  width: 3rem;
+  height: 3rem;
 }
 
 
@@ -53,4 +79,13 @@ body {
   object-fit: cover;
 }
 
+@media (min-width: 992px) { 
 
+  .margin-title {
+    margin:2.6rem;
+  }
+
+  .btn-margin {
+    margin:2rem;
+  }
+}
