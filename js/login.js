@@ -57,32 +57,31 @@ window.addEventListener('load', function() {
   var providerGoogle = new firebase.auth.GoogleAuthProvider();
 
   googleLogin.addEventListener('click', function() {
-
     firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
-      console.log(result.user);
-      window.localStorage.setItem('storageUID', result.user.uid);
-      saveData(result.user);
-      // Guardando el UID en el localstorage
-      let UID = window.localStorage.getItem('storageUID');
-      console.log(UID);
-
-      // Redireccionando al perfil
-      alert('Registro exitoso');
- 
-      
-    }).then(user => {
-      window.location.href = 'views/collage.html';
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      console.log(user.displayName);
+      console.log(user.photoURL);
+      firebase.database().ref('users/' + user.uid).set({
+        name: user.displayName,
+        email: user.email,
+        profilePhoto: user.photoURL
+      }).then(
+        user => {
+          $(location).attr('href', 'collage.html');
+        });
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
     });
   });
-  function saveData(user) {
-    console.log(user);
-    var userToSave = {
-      uid: user.uid,
-      name: user.displayName,
-      email: user.email,
-      photo: user.photoURL
-    };
-      // probando es el nombre de tu rama
-    firebase.database().ref('users/' + user.uid).set(userToSave); // push añade un registro 
-  }
 });
