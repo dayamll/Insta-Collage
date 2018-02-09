@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Insta Collage</title>
+	<link rel="icon" href="../assets/images/insta.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	  crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+	<!-- Image and text -->
+	<nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="../assets/images/insta.png" width="30" height="30" class="d-inline-block align-top" alt=""> Insta Collage
+		</a>
+	</nav>
+	<section class="container-fluid container-collage">
+		<div class="row">
+			<div class="col-md-4 padding collage " ondragover="allowDrop(event)" ondrop="drop(event)">
+			</div>
+			<div class="col-md-3 padding collage" ondragover="allowDrop(event)" ondrop="drop(event)">
+			</div>
+			<div class="col-md-5 padding collage" ondragover="allowDrop(event)" ondrop="drop(event)">
+			</div>
+			<div class="col-md-5 padding collage" ondragover="allowDrop(event)" ondrop="drop(event)">
+			</div>
+			<div class="col-md-4 padding collage" ondragover="allowDrop(event)" ondrop="drop(event)">
+			</div>
+			<div class="col-md-3 padding collage" ondragover="allowDrop(event)" ondrop="drop(event)">
+			</div>
+		</div>
+	</section>
+
+	<section class="container-fluid separator-photo">
+		<h2 class="text-center text-muted">Insta collage</h2>
+	</section>
+
+	<!-- segunda sección, fotos arrastrables -->
+	<section class="container-fluid photos">
+		<div class="row">
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="../assets/images/dnce.jpeg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img0">
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="../assets/images/fall-out-boy.png" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img1">
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="../assets/images/imagine-dragons.jpg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img2">
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="../assets/images/bruno-mars.jpg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img3">
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="../assets/images/marron-five.jpg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img4">
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="../assets/images/shawn-mendes.png" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img5">
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="../assets/images/coldplay.jpg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img6">
+			</div>
+			<div class="col-6 col-sm-4 col-md-3 padding-photo">
+				<img src="../assets/images/sam-smith.jpg" alt="" class="img-responsive img-fluid" draggable="true" ondragstart="drag(event)" id="img7">
+			</div>
+		</div>
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	  crossorigin="anonymous"></script>
+	<script src="../js/app.js" type=""></script>
+</body>
+
+</html>
