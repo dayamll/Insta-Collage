@@ -1,0 +1,25 @@
+[debug] [2018-02-09T22:49:51.905Z] ----------------------------------------------------------------------
+[debug] [2018-02-09T22:49:51.909Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Margarita\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
+[debug] [2018-02-09T22:49:51.909Z] CLI Version:   3.17.4
+[debug] [2018-02-09T22:49:51.909Z] Platform:      win32
+[debug] [2018-02-09T22:49:51.910Z] Node Version:  v8.9.0
+[debug] [2018-02-09T22:49:51.911Z] Time:          Fri Feb 09 2018 17:49:51 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-02-09T22:49:51.912Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-09T22:49:51.937Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2018-02-09T22:49:51.939Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Margarita\Desktop\Insta-Collage
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+

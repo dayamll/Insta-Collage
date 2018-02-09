@@ -69,6 +69,8 @@ window.addEventListener('load', function() {
       // Redireccionando al perfil
       alert('Registro exitoso');
  
+      
+    }).then(user => {
       window.location.href = 'views/collage.html';
     });
   });
