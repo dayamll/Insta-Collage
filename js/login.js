@@ -54,8 +54,7 @@ window.addEventListener('load', function() {
 
 
   // Iniciando autentificación con Google
-  let provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().useDeviceLanguage();
+  var providerGoogle = new firebase.auth.GoogleAuthProvider();
 
   googleLogin.addEventListener('click', function() {
 
