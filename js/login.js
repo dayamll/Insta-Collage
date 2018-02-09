@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
   loginBtn.addEventListener('click', function(event) {
     console.log('click');
     event.preventDefault();
-    window.location.href = 'views/home.html';
+    window.location.href = 'views/collage.html';
   });
 
   function activeLoginBtn() {
@@ -57,7 +57,7 @@ window.addEventListener('load', function() {
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().useDeviceLanguage();
 
-  googleLogin.addEventListener('click', ()=> {
+  googleLogin.addEventListener('click', function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a Google Access Token. You can use it to access the Google API.
       var token = result.credential.accessToken;
