@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
   }
 
   inputEmail.addEventListener('input', function() {
-    var regexEmail = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
+    const regexEmail = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
     console.log(regexEmail.test(inputEmail.value));
     if (regexEmail.test(inputEmail.value)) {
       validateEmail = true;
@@ -41,7 +41,7 @@ window.addEventListener('load', function() {
   });
 
   inputPassword.addEventListener('input', function() {
-    var regexPassword = /^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z\0-9]{6}$/;
+    const regexPassword = /^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z\0-9]{6}$/;
     console.log(regexPassword.test(inputPassword.value));
     if (regexPassword.test(inputPassword.value)) {
       validatePassword = true;
@@ -54,27 +54,34 @@ window.addEventListener('load', function() {
 
 
   // Iniciando autentificación con Google
-  var provider = new firebase.auth.GoogleAuthProvider();
+  let provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().useDeviceLanguage();
 
   googleLogin.addEventListener('click', function() {
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      var token = result.credential.accessToken;
-      // The signed-in user info.
-      var user = result.user;
-      // ...
-    }).then(user => {
+
+    firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
+      console.log(result.user);
+      window.localStorage.setItem('storageUID', result.user.uid);
+      saveData(result.user);
+      // Guardando el UID en el localstorage
+      let UID = window.localStorage.getItem('storageUID');
+      console.log(UID);
+
+      // Redireccionando al perfil
+      alert('Registro exitoso');
+ 
       window.location.href = 'views/collage.html';
-    }).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-      // ...
     });
   });
+  function saveData(user) {
+    console.log(user);
+    var userToSave = {
+      uid: user.uid,
+      name: user.displayName,
+      email: user.email,
+      photo: user.photoURL
+    };
+      // probando es el nombre de tu rama
+    firebase.database().ref('users/' + user.uid).set(userToSave); // push añade un registro 
+  }
 });
