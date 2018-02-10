@@ -54,9 +54,8 @@ window.addEventListener('load', function() {
 
 
   // Iniciando autentificación con Google
-  var providerGoogle = new firebase.auth.GoogleAuthProvider();
-
   googleLogin.addEventListener('click', function(event) {
+    var providerGoogle = new firebase.auth.GoogleAuthProvider();
     event.preventDefault();
     firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -87,8 +86,10 @@ window.addEventListener('load', function() {
   });
 
   // login con Facebook
-  var providerFb = new firebase.auth.FacebookAuthProvider();
   facebookLogin.addEventListener('click', function(event) {
+    var providerFb = new firebase.auth.FacebookAuthProvider();
+    provider.addScope('public_profile');
+
     event.preventDefault();
     firebase.auth().signInWithPopup(providerFb).then(function(result) {
       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
