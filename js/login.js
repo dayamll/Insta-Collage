@@ -71,7 +71,7 @@ window.addEventListener('load', function() {
         profilePhoto: user.photoURL
       }).then(
         user => {
-          window.location.href = 'collage.html';
+          window.location.href = 'views/collage.html';
         });
       // ...
     }).catch(function(error) {
@@ -100,7 +100,7 @@ window.addEventListener('load', function() {
         email: user.email,
         profilePhoto: user.photoURL,
       }).then(user => {
-        window.location.href = 'collage.html';
+        window.location.href = 'views/collage.html';
       });
       console.log(user);
       // $(location).attr('href', 'home.html');
