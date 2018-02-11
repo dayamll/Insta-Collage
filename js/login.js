@@ -88,7 +88,7 @@ window.addEventListener('load', function() {
   // login con Facebook
   facebookLogin.addEventListener('click', function(event) {
     var providerFb = new firebase.auth.FacebookAuthProvider();
-    provider.addScope('public_profile');
+    providerFb.addScope('public_profile');
 
     event.preventDefault();
     firebase.auth().signInWithPopup(providerFb).then(function(result) {
